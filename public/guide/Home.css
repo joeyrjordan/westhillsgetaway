@@ -1,0 +1,95 @@
+ .u-section-1 {
+  background-image: url("images/whg2.png");
+  background-position: 50% 50%;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 100vh;
+}
+
+.u-section-1 .u-text-1 {
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+  font-size: 1.125rem;
+  margin: 349px auto 0;
+}
+
+.u-section-1 .u-text-2 {
+  font-size: 0.75rem;
+  margin: 58px 0 0;
+}
+
+.u-section-1 .u-btn-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-text-3 {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.u-section-1 .u-btn-2 {
+  background-image: none;
+}
+
+.u-section-1 .u-btn-3 {
+  background-image: none;
+  letter-spacing: 1px;
+  border-style: none;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 75px auto 60px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-text-3 {
+    width: auto;
+  }
+
+  .u-section-1 .u-btn-3 {
+    align-self: center;
+    --animation-custom_in-translate_x: 0px;
+    --animation-custom_in-translate_y: 0px;
+    --animation-custom_in-opacity: 0;
+    --animation-custom_in-rotate: 0deg;
+    --animation-custom_in-scale: 0.3;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    font-size: 0.6875rem;
+    width: auto;
+    margin-top: 319px;
+    margin-left: 27px;
+    margin-right: 27px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .u-section-1 .u-btn-1 {
+    padding: 0;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-top: -9px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .u-section-1 .u-btn-2 {
+    padding: 0;
+  }
+
+  .u-section-1 .u-btn-3 {
+    font-size: 0.75rem;
+    margin-top: 40px;
+  }
+}
