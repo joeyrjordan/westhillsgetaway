@@ -5,3 +5,18 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/guide",
+        destination: "https://whg1.nicepage.io/",
+        permanent: false,
+      },
+    ];
+  },
+};
+
+export default nextConfig;
