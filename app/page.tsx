@@ -263,30 +263,52 @@ function AnimatedCard({ children, delay = 0 }: any) {
 <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
 
   {/* Airbnb */}
-  <AnimatedCard delay={0}>
-    <div>
-   <img
-    src="/airbnb.jpg"
-    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
-  />
-      <p className={`mt-4 text-xl text-gray-200 ${cinzel.className}`}>
-        Airbnb
-      </p>
+<AnimatedCard delay={0}>
+  <a
+    href="https://www.airbnb.com/h/westhillsgetaway1"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group block"
+  >
+    <div className="overflow-hidden rounded-2xl border border-teal-500/20 shadow-lg transition-all duration-300 group-hover:shadow-[0_0_30px_rgba(20,184,166,0.5)]">
+      <img
+        src="/airbnb.jpg"
+        alt="Airbnb"
+        className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+      />
     </div>
-  </AnimatedCard>
+
+    <p
+      className={`mt-4 text-xl text-gray-200 transition-colors duration-300 group-hover:text-teal-300 ${cinzel.className}`}
+    >
+      Airbnb
+    </p>
+  </a>
+</AnimatedCard>
 
   {/* Vrbo */}
-  <AnimatedCard delay={0.1}>
-    <div>
-   <img
-    src="/vrbo.jpg"
-    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
-  />
-      <p className={`mt-4 text-xl text-gray-200 ${cinzel.className}`}>
-        Vrbo
-      </p>
+<AnimatedCard delay={0}>
+  <a
+    href="https://www.vrbo.com/3225858?dateless=true"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group block"
+  >
+    <div className="overflow-hidden rounded-2xl border border-teal-500/20 shadow-lg transition-all duration-300 group-hover:shadow-[0_0_30px_rgba(20,184,166,0.5)]">
+      <img
+        src="/vrbo.jpg"
+        alt="Vrbo"
+        className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+      />
     </div>
-  </AnimatedCard>
+
+    <p
+      className={`mt-4 text-xl text-gray-200 transition-colors duration-300 group-hover:text-teal-300 ${cinzel.className}`}
+    >
+      Vrbo
+    </p>
+  </a>
+</AnimatedCard>
 
 </div>
 
@@ -295,7 +317,7 @@ function AnimatedCard({ children, delay = 0 }: any) {
 
 
 <section id="contact" className="px-6 py-20">
-<h2 className={`text-4xl md:text-5xl text-center mb-12 text-teal-400 ${cinzel.className} neon-pulse`}>
+<h2 className={`text-4xl md:text-4xl text-center mb-12 text-teal-400 ${cinzel.className} neon-pulse`}>
   Contact Us
 </h2>
 
