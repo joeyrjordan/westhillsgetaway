@@ -84,7 +84,6 @@ React.useEffect(() => {
       {open && (
         <div className="md:hidden bg-black/90 px-6 pb-4 space-y-3 text-gray-300">
           <a href="#" className="block hover:text-teal-400">Home</a>
-          <a href="#gallery" className="block hover:text-teal-400">Gallery</a>
           <a href="#contact" className="block hover:text-teal-400">Contact</a>
         </div>
       )}
