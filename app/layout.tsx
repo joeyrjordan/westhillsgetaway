@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Retro Revival Arcades",
-  description: "Custom multi-game premium arcade cabinets and retro gaming systems.",
+  title: "West Hills Getaway",
+  description: "Spacious short-term rental in the heart of West Salem, Oregon.",
 };
 
 export default function RootLayout({
