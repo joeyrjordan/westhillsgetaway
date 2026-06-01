@@ -1,12 +1,16 @@
 "use client";
 
-import { Luckiest_Guy } from "next/font/google";
+import { Cinzel } from "next/font/google";
 
-const luckiestGuy = Luckiest_Guy({
-  weight: "400",
+const cinzel = Cinzel({
   subsets: ["latin"],
 });
 
+import localFont from "next/font/local";
+
+const amsterdamFour = localFont({
+  src: "./fonts/AmsterdamFour.ttf",
+});
 
 import Script from "next/script";
 import React from "react";
@@ -36,7 +40,7 @@ React.useEffect(() => {
   return (
 
 <nav
-  className={`fixed top-0 left-0 w-full z-50 ${luckiestGuy.className} transition-all duration-500
+  className={`fixed top-0 left-0 w-full z-50 ${cinzel.className} transition-all duration-500
     ${
       scrolled
         ? "backdrop-blur-md bg-black/50 border-b border-white/10 navbar-glow"
@@ -48,7 +52,13 @@ React.useEffect(() => {
 
         {/* LEFT: LOGO */}
         <div className="flex items-center gap-3">
-          <img src="/logo.png" alt="Logo" className="w-25 h-35" />
+
+<div
+  className={`${amsterdamFour.className} text-white text-lg md:text-2xl`}
+>
+  West Hills Getaway
+</div>
+
           <span className="text-white font-bold text-lg hidden sm:block">
 
           </span>
@@ -57,7 +67,7 @@ React.useEffect(() => {
         {/* RIGHT: DESKTOP MENU */}
         <div className="hidden md:flex gap-8 text-lg text-gray-300">
           <a href="#" className="hover:text-teal-400 hover:drop-shadow-[0_0_6px_#14b8a6] transition">Home</a>
-          <a href="#services" className="hover:text-teal-400 hover:drop-shadow-[0_0_6px_#14b8a6] transition">Services</a>
+          
           <a href="#contact" className="hover:text-teal-400 hover:drop-shadow-[0_0_6px_#14b8a6] transition">Contact</a>
         </div>
 
@@ -217,91 +227,63 @@ function AnimatedCard({ children, delay = 0 }: any) {
 
 
 {/* HERO */}
-<section className="relative h-[75vh] md:h-screen pt-20 flex items-center justify-center text-center px-6 overflow-hidden">
-  {/* Background video */}
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
+<section className="relative h-screen pt-20 flex items-center justify-center text-center px-6 overflow-hidden">
+
+  {/* Background image */}
+  <img
+    src="/hero.jpg"
+    alt="West Hills Getaway"
     className="absolute inset-0 w-full h-full object-cover"
-  >
-    <source src="/hero.mp4" type="video/mp4" />
-  </video>
+  />
 
-  {/* Dark overlay for readability */}
-  <div className="absolute inset-0 bg-black/25" />
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/40" />
 
-  {/* Content */}
-  <div className="relative z-10 max-w-3xl">
- 
-
-    <motion.h1
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3 }}
-      className="text-4xl md:text-6xl font-bold mt-10"
-    >
-
-    </motion.h1>
-
-    <p className="mt-6 text-lg text-gray-200 max-w-xl mx-auto">
-
-    </p>
-
-
+  {/* Hero Content */}
+  <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
+<h1
+  className={`${cinzel.className} text-white text-2xl md:text-3xl tracking-wide drop-shadow-lg`}
+>
+  Spacious short-term rental in the heart of West Salem, Oregon
+</h1>
   </div>
+
 </section>
 
 <div className="text-center py-10 bg-black">
+
 <h2
-  className={`text-4xl md:text-6xl text-teal-400 ${luckiestGuy.className} arcade-flicker`}
+  className={`text-4xl md:text-4xl text-white ${cinzel.className}`}
 >
-  The options are limitless!
+  Check us out!
 </h2>
 </div>
 
 
-<div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+<div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
 
-  {/* Fighting */}
+  {/* Airbnb */}
   <AnimatedCard delay={0}>
     <div>
-      <img
-        src="/fighting.jpg"
-        alt="Fighting Games"
-        className="rounded-2xl w-full h-64 object-cover border border-teal-500/20 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(20,184,166,0.6)]"
-      />
-      <p className={`mt-4 text-xl text-gray-200 ${luckiestGuy.className}`}>
-        Fighting
+   <img
+    src="/airbnb.jpg"
+    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
+  />
+      <p className={`mt-4 text-xl text-gray-200 ${cinzel.className}`}>
+        Airbnb
       </p>
     </div>
   </AnimatedCard>
 
-  {/* Racing */}
+  {/* Vrbo */}
   <AnimatedCard delay={0.1}>
     <div>
-      <img
-        src="/racing.jpg"
-        alt="Racing Games"
-        className="rounded-2xl w-full h-64 object-cover border border-teal-500/20 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(20,184,166,0.6)]"
-      />
-      <p className={`mt-4 text-xl text-gray-200 ${luckiestGuy.className}`}>
-        Linked Racing
-      </p>
-    </div>
-  </AnimatedCard>
-
-  {/* Shooting */}
-  <AnimatedCard delay={0.2}>
-    <div>
-      <img
-        src="/shooting.jpg"
-        alt="Shooting Games"
-        className="rounded-2xl w-full h-64 object-cover border border-teal-500/20 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(20,184,166,0.6)]"
-      />
-      <p className={`mt-4 text-xl text-gray-200 ${luckiestGuy.className}`}>
-        Shooting
+   <img
+    src="/vrbo.jpg"
+    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
+  />
+      <p className={`mt-4 text-xl text-gray-200 ${cinzel.className}`}>
+        Vrbo
       </p>
     </div>
   </AnimatedCard>
@@ -313,7 +295,7 @@ function AnimatedCard({ children, delay = 0 }: any) {
 
 
 <section id="contact" className="px-6 py-20">
-<h2 className={`text-4xl md:text-5xl text-center mb-12 text-teal-400 ${luckiestGuy.className} neon-pulse`}>
+<h2 className={`text-4xl md:text-5xl text-center mb-12 text-teal-400 ${cinzel.className} neon-pulse`}>
   Contact Us
 </h2>
 
@@ -321,8 +303,8 @@ function AnimatedCard({ children, delay = 0 }: any) {
 </section>
 
       {/* FOOTER */}
-<footer className={`text-center py-8 text-gray-500 ${luckiestGuy.className}`}>
-  © {new Date().getFullYear()} Retro Revival Arcades
+<footer className={`text-center py-8 text-gray-500 ${cinzel.className}`}>
+  © {new Date().getFullYear()} West Hills Getaway
 </footer>
     </div>
   );
